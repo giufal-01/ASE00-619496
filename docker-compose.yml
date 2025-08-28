@@ -1,0 +1,25 @@
+services:
+  ex1:
+    build: ./app
+    ports:
+      - 8089:5001
+    secrets:
+      - certificate
+      - key
+    command: flask run --cert=/run/secrets/certificate --key=/run/secrets/key --host=0.0.0.0 --port=5001
+
+  locust:
+    build:
+      context: .
+      dockerfile: Dockerfile_locust
+    ports:
+      - 8090:8089
+    secrets:
+      - certificate
+      - key
+  
+secrets:
+  certificate:
+    file: ./app/asecert.pem
+  key:
+    file: ./app/asekey.pem

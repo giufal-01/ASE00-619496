@@ -71,4 +71,18 @@ def get_secret():
     response = make_response(jsonify(exam=X), 200)
     return create_secret(X,response)
 
+
+@app.route('/ex1', methods=['GET'])
+def ex():
+    a = request.args.get('a', type=str)
+    D = sum(l.isdigit() for l in a)
+    C = sum(l.isalpha() for l in a)
+    if a :
+        if C == 0:
+            return make_response(jsonify(s="Invalid Input"), 400)
+        return make_response(jsonify(s=D//C), 200)
+    else:
+        return make_response(jsonify(s="Invalid Input"), 400)
+
+
 #add your route here

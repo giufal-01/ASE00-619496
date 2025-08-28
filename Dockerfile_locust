@@ -1,0 +1,11 @@
+FROM python:3.12-slim
+
+WORKDIR /619496
+
+COPY locustfile.py .
+
+RUN pip install locust
+
+EXPOSE 8089
+
+CMD locust

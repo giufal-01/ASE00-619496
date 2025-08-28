@@ -34,5 +34,10 @@ class QuickstartUser(HttpUser):
         for a in range(10):
             self.client.get(f"/sub?a={a}00&b=999", name = "mugi", verify = False)
             time.sleep(1)
+
+    @task(1)
+    def ex(self):
+        self.client.get(f"/ex1?a=C1a0", verify=False, name = "test ex1")
+        time.sleep(1)
     
     #add your test here

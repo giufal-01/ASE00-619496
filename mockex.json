@@ -1,0 +1,133 @@
+{
+	"id": "40690f37-80b3-48af-8d3f-6c16b1ed2510",
+	"name": "mockex",
+	"timestamp": "2025-08-28T13:56:18.550Z",
+	"collection_id": "41968683-f0326ade-76f3-4a35-ac38-13cae89d3ee4",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 5,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-08-28T13:56:18.317Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "af2e7142-f21d-404b-a2f6-179d4cec4264",
+			"name": "New Request",
+			"url": "http://localhost:5002/ex1?a=1a0",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Correct value of s": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Correct value of s": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Correct value of s": true
+				}
+			]
+		},
+		{
+			"id": "83d1d00a-5a22-46af-9caa-a776d7979336",
+			"name": "New Request",
+			"url": "http://localhost:5002/ex1?a=123",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Correct value of s": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Correct value of s": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Correct value of s": false
+				}
+			]
+		},
+		{
+			"id": "eb620ed1-6971-4248-9bf5-ec64e8b8cf88",
+			"name": "New Request",
+			"url": "http://localhost:5002/ex1?a=ciao",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Correct value of s": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Correct value of s": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Correct value of s": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 11,
+	"collection": {
+		"requests": [
+			{
+				"id": "af2e7142-f21d-404b-a2f6-179d4cec4264",
+				"method": "GET"
+			},
+			{
+				"id": "83d1d00a-5a22-46af-9caa-a776d7979336",
+				"method": "GET"
+			},
+			{
+				"id": "eb620ed1-6971-4248-9bf5-ec64e8b8cf88",
+				"method": "GET"
+			}
+		]
+	}
+}
